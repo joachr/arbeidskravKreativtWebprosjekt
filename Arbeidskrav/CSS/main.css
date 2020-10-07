@@ -1,0 +1,132 @@
+/*==============
+  GLOBAL STYLING
+  ==============*/
+
+html {
+    animation-name: fadein;
+    animation-duration: 4s;
+}
+
+body {
+    background: white;
+    animation-name: box2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: /*Enkel visuell fremstilling av grid*/
+        "box1 box1 box1"
+        "box2 box2 box2"
+        "box3 box4 box5"
+        "box6 box7 box8";
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    font-style: italic;
+    padding: 1em;
+    border-style: solid;
+    border-radius: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    font-style: italic;
+}
+
+div {
+    
+}
+
+/*==============
+  GRID-BOKSER
+  ==============*/
+
+.box1 {
+    grid-area: box1;
+}
+
+.box2 {
+    grid-area: box2;
+    font-size: 20px;
+}
+
+.box3 {
+    grid-area: box3;
+    display: flex;
+    justify-content: center;
+}
+
+.box4 {
+    grid-area: box4;
+    display: flex;
+    justify-content: center;
+}
+
+.box5 {
+    grid-area: box5;
+    display: flex;
+    justify-content: center;
+}
+
+.box6 {
+    grid-area: box6;
+}
+
+.box7 {
+    grid-area: box7;
+}
+
+.box8 {
+    grid-area: box8;
+}
+
+.box1, .box2 {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.box3:hover, .box4:hover, .box5:hover {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    font-size: 20px;
+    transform: scale(1.2);
+}
+
+.box3, .box4, .box5 {
+    transition-duration: 0.4s;
+}
+
+.box3 img, .box4 img, .box5 img {
+    width: 50%;
+    height: 100%;
+}
+
+/*==============
+  ANIMASJONER
+  ==============*/
+
+@keyframes box2 {
+    0%, 100% {background-color: #fceed1;}
+    50% {background-color: #f2d53c;}
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
